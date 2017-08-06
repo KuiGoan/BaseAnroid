@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.ifi.kuirin.baseanroid.databinding.ActivityMainBinding;
+import com.ifi.kuirin.baseanroid.ui.dialog_fragment.DialogFragmentActivity;
 import com.ifi.kuirin.baseanroid.ui.recyclerview.RecyclerActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -19,18 +20,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         activityMainBinding = DataBindingUtil
                 .setContentView(this, R.layout.activity_main);
         activityMainBinding.recyclerView.setOnClickListener(this);
+        activityMainBinding.dialogFragment.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        Intent intent;
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.recycler_view:
                 intent = new Intent(this, RecyclerActivity.class);
-                startActivity(intent);
+                break;
+            case R.id.dialog_fragment:
+                intent = new Intent(this, DialogFragmentActivity.class);
                 break;
             default:
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 }
