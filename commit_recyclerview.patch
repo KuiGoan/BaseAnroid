@@ -1,0 +1,15 @@
+Index: app/src/main/java/com/ifi/kuirin/baseanroid/ui/recyclerview/RecyclerActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/ifi/kuirin/baseanroid/ui/recyclerview/RecyclerActivity.java	(date 1501983196000)
++++ app/src/main/java/com/ifi/kuirin/baseanroid/ui/recyclerview/RecyclerActivity.java	(date 1501983212000)
+@@ -41,7 +41,6 @@
+         mBinding.recyclerView1.setItemAnimator(new DefaultItemAnimator());
+         mBinding.recyclerView1.setAdapter(mAdapter1);
+         mBinding.recyclerView2.setAdapter(mAdapter2);
+-
+         initFakeData();
+ 
+         //item long click
