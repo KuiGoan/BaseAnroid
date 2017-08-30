@@ -18,5 +18,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DialogFragment"/>
+
+        <Button
+            android:id="@+id/coordinator_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CoordinatorLayout"/>
     </LinearLayout>
 </layout>

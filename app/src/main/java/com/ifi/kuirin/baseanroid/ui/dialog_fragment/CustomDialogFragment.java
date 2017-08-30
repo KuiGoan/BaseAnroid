@@ -2,6 +2,7 @@ package com.ifi.kuirin.baseanroid.ui.dialog_fragment;
 
 import android.app.Dialog;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
@@ -10,8 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ifi.kuirin.baseanroid.R;
-import com.ifi.kuirin.baseanroid.databinding.DialogFragmentBinding;
-import com.ifi.kuirin.baseanroid.databinding.DialogFragmentMisionBinding;
+import com.ifi.kuirin.baseanroid.databinding.DialogFragmentDemoBinding;
 
 /**
  * Created by KuiRin on 8/6/2017 AD.
@@ -24,7 +24,7 @@ public class CustomDialogFragment extends DialogFragment {
 
     public static final String KEY_TYPE = "KEY_TYPE";
 
-    private DialogFragmentBinding mBinding;
+    private DialogFragmentDemoBinding mBinding;
 
     private int mType;
 
@@ -108,8 +108,8 @@ public class CustomDialogFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 //        mBinding = DataBindingUtil.inflate(inflater, R.layout.dialog_fragment, container, false);
 //        mBinding = CustomDialogFragmentBinding.inflate(inflater, container, false);
-        DialogFragmentMisionBinding binding = DataBindingUtil
-                .inflate(inflater, R.layout.dialog_fragment_mision, container, false);
+        DialogFragmentDemoBinding binding = DataBindingUtil
+                .inflate(inflater, R.layout.dialog_fragment_demo, container, false);
         View view = binding.getRoot();
         binding.cancelAction.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,6 +123,8 @@ public class CustomDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Dialog dialog = super.onCreateDialog(savedInstanceState);
+        //Make dialog background transparent
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
         return dialog;
     }
 

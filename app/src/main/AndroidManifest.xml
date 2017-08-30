@@ -20,6 +20,7 @@
         <activity android:name=".ui.baseview.BaseViewSelectedActivity"/>
         <activity android:name=".ui.recyclerview.DragAndDropRecyclerViewActivity"/>
         <activity android:name=".ui.dialog_fragment.DialogFragmentActivity"/>
+        <activity android:name=".ui.coordinatorlayout.CoordinatorActivity"/>
     </application>
 
 </manifest>
